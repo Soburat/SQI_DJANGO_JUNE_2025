@@ -1,0 +1,31 @@
+{% extends "partials/base.html" %}
+
+{% block title %} Album {% endblock title %}
+
+{% block content %}
+
+
+  <main>
+    <h2>Album Title</h2>
+
+    {% for album in albums %}
+
+        <li>{{album.title}} ; {{album.artist.artist_name}} {{album.release_date}}</li>
+        
+    {% endfor %}
+
+    <p><strong>Artist:</strong> Artist Name</p>
+    <p><strong>Release Date:</strong> January 1, 2024</p>
+    <img src="https://via.placeholder.com/200" alt="Album cover">
+
+    <section>
+      <h3>Track List</h3>
+      <ol>
+        <li>Track One – 3:45</li>
+        <li>Track Two – 4:15</li>
+        <li>Track Three – 5:00</li>
+      </ol>
+    </section>
+  </main>
+
+  {% endblock %}

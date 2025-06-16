@@ -1,0 +1,47 @@
+{% extends "partials/base.html" %}
+
+{% block content %}
+<h1>Authors Ordered by DOB</h1>
+{% for author in author_dob %}
+      <p>First Name : {{  author.first_name }}</p>
+      <p>Last Name : {{  author.last_name }}</p>
+      <p>Date of birth : {{  author.birth_date }}</p>
+
+
+{% endfor %}
+
+<h1>Authors in Default Order</h1>
+{% for author in authors %}
+      <p>First Name : {{  author.first_name }}</p>
+      <p>Last Name : {{  author.last_name }}</p>
+      <p>Date of birth : {{  author.birth_date }}</p>
+
+
+{% endfor %}
+
+
+{% comment %} <h1>test</h1>
+{% for book in books %}
+<p>{{ book }}</p>
+{% endfor %} {% endcomment %}
+<h1>Book Info</h1>
+{% for book in books %}
+<h3>{{ book.title }}</h3>
+<p>Written By: {{ book.author }}</p>
+<p>Published on: {{ book.published_on }}</p>
+<p>It has {{ book.number_of_pages }} pages</p>
+
+
+{% endfor %}
+
+<h1>Authors And Their Books</h1>
+{% for author in authors %}
+
+    {% for book in author.book_set.all %}
+    <h3>{{ author }}</h3>
+    <p>{{ book }}</p>
+    {% endfor %}
+
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Music Store{% endblock title %}</title>
+</head>
+<body>
+
+  <header>
+    <h1>Music Store</h1>
+    <nav>
+      <a href="{% url 'homepage'%}">homepage</a>
+      <a href="{% url 'album'%}">Albums</a>
+      <a href="{% url 'artist'%}">Artists</a>
+    
+    </nav>
+  </header>
+  {% block content %} {% endblock %} 
+
+  <footer>
+    <p>&copy; 2025 Music Store</p>
+  </footer>
+
+</body>
+</html>

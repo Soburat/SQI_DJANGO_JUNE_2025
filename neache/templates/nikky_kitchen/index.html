@@ -1,0 +1,43 @@
+{% extends "partials/base.html" %}
+
+{% block title %} Our Home Page {% endblock title %}
+
+{% block content %}
+
+  <!-- Hero Section -->
+  <header>
+    <div class="container">
+      <h1 class="display-4">Welcome to Balablu</h1>
+      <p class="lead">Simplifying your digital experience with style and function.</p>
+      <a href="about.html" class="btn btn-light btn-lg mt-3">Learn More</a>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="feature text-center bg-light">
+    <div class="container">
+      <h2 class="mb-4">What We Offer</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <i class="bi bi-lightning-charge display-5 text-primary"></i>
+          <h4>Speed</h4>
+          <p>Fast and reliable digital solutions built with efficiency in mind.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="bi bi-brush display-5 text-primary"></i>
+          <h4>Design</h4>
+          <p>Modern, sleek interfaces for a seamless user experience.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="bi bi-shield-check display-5 text-primary"></i>
+          <h4>Security</h4>
+          <p>Your data is safe with us. We prioritize privacy and protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {% endblock content %}
+
+  

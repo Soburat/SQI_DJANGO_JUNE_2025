@@ -1,0 +1,32 @@
+{% extends "partials/base.html" %}
+
+{% block title %} Artist {% endblock title %}
+
+{% block content %}
+
+<main> 
+     <h2>Artist Name</h2>
+    <p>Short bio or description of the artist.</p>
+
+    <section>
+
+      <h3>Albums by Artist Name</h3> 
+
+        <ul>
+            {% for artist in artists %}
+
+              <li>{{artist.artist_name}} ; {{artist.debut_year}}</li>
+
+            {% endfor %}
+    
+        </ul>
+
+        <ul> 
+            <li><a href="album.html">Album One (2024)</a></li>
+            <li><a href="album.html">Album Two (2023)</a></li>
+
+        </ul>
+    </section>
+</main>
+
+{% endblock %}
